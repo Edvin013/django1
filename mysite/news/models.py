@@ -8,4 +8,4 @@ class news(models.Model):
     photo = models.ImageField(upload_to = 'photos/%Y/%m/%d/')
     is_published =models.BooleanField(default=True)
 
-  #Edvin
+  #Edvin--
