@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import News
+
 
 def index(request):
-    return HttpResponse('helo')
-
-
-def test(request):
-    return HttpResponse('<h1>test stranica</h1>')    
+     news = News.objects.all()
+     return render(request,'news/index.html',{'news':news}) 
