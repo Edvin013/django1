@@ -8,4 +8,9 @@ class News(models.Model):
     photo = models.ImageField(upload_to = 'photos/%Y/%m/%d/')
     is_published =models.BooleanField(default=True)
 
-  #Edvin-- . .
+    class Meta:
+      verbose_name = 'Новость'
+      verbose_name_plural = 'Новости'
+      ordering = ['-created_at'] # sortirovka v adminke Edvin
+
+    
